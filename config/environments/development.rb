@@ -61,8 +61,22 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+  config.assets.debg = true
 
-  # Raises error for missing translations.
+  # Raises error for missing translaions.
+
+  config.action_mailer.smtp_settings = {
+address: "smtp.gmail.com",
+port: 587,
+domain: ENV["DOMAIN_NAME"],
+authentication: "plain",
+enable_starttls_auto: true,
+user_name: ENV["GMAIL_USERNAME"],
+password: ENV["GMAIL_PASSWORD"]
+}
+
+
+config.action_mailer.perform_deliveries = true
   # config.i18n.raise_on_missing_translations = true
 
   # Annotate rendered view with file names.
