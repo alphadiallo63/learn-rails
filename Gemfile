@@ -26,9 +26,7 @@ gem "redis", ">= 4.0.1"
 gem "bootsnap", require: false
 
 # learn-rails
-gem 'activerecord-tableless', '>=1.3.3'
 
-gem 'compass-rails', '~> 2.0.alpha.0'
 gem 'figaro'
 gem 'gibbon'
 gem 'google_drive'
